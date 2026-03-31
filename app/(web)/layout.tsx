@@ -28,7 +28,7 @@ export default function RootLayout({
         className={`${font.className} antialiased`}
       >
         <Navbar />
-        <FluidCursor />
+        {/* <FluidCursor /> */}
         {children}
         <Footer />
         <MusicToggle />
