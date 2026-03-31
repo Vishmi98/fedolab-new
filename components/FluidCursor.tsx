@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { SmokeyFluidCursor } from "react-smokey-fluid-cursor";
 
 export default function FluidCursor() {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState<boolean | null>(null);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -17,7 +17,7 @@ export default function FluidCursor() {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  // ❌ Disable on mobile
+  // 🚫 Do NOT render on mobile (prevents scroll blocking)
   if (isMobile) return null;
 
   return (
@@ -41,7 +41,8 @@ export default function FluidCursor() {
         }
 
         canvas {
-          pointer-events: none; /* EXTRA SAFETY */
+          pointer-events: none;
+          touch-action: none;
           filter: grayscale(100%) brightness(1.2) contrast(1.4);
           mix-blend-mode: screen;
           animation: mercuryLight 20s ease-in-out infinite;
