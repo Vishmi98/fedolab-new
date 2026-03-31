@@ -42,10 +42,10 @@ const Contact = () => {
                         we are here to help you
                     </motion.p>
                     <motion.p className="text-2xl md:text-4xl font-semibold" variants={itemVariants}>
-                        Lorem ipsum dolor sit amet consectetur.
+                        Let&apos;s build something powerful together.
                     </motion.p>
                     <motion.p variants={itemVariants}>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore, officia pariatur aut atque vel suscipit similique quis eum ad neque!
+                        Whether you&apos;re launching a new idea or scaling an existing business, our team is here to turn your vision into reality. We combine strategy, design, and technology to deliver solutions that drive real impact.
                     </motion.p>
                     <motion.div className="mt-10 space-y-4" variants={itemVariants}>
                         <motion.div className="flex gap-5" variants={itemVariants}>
@@ -57,11 +57,11 @@ const Contact = () => {
                             </motion.div>
                             <div>
                                 <p className="text-gray-500">Email</p>
-                                <p className="text-lg font-medium">fedolab@gmail.com</p>
+                                <p className="text-lg font-medium">info@fedolab.com</p>
                             </div>
                         </motion.div>
 
-                        <motion.div className="flex gap-5" variants={itemVariants}>
+                        {/* <motion.div className="flex gap-5" variants={itemVariants}>
                             <motion.div
                                 variants={bounceIconVariants}
                                 animate="animate"
@@ -72,7 +72,7 @@ const Contact = () => {
                                 <p className="text-gray-500">Phone</p>
                                 <p className="text-lg font-medium">012 3456 789</p>
                             </div>
-                        </motion.div>
+                        </motion.div> */}
 
                     </motion.div>
                 </motion.div>

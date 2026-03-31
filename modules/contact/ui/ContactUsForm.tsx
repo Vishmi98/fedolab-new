@@ -4,6 +4,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import "react-toastify/dist/ReactToastify.css";
 
 import { ContactUsType } from "../contact.types";
@@ -15,6 +16,7 @@ import {
 
 const ContactUsForm = () => {
   const [ripples, setRipples] = useState<{ x: number; y: number; id: number }[]>([]);
+  const router = useRouter();
 
   const handleRipple = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -29,16 +31,54 @@ const ContactUsForm = () => {
 
   const handleSubmit = async (
     values: ContactUsType,
-    { resetForm }: { resetForm: () => void }
+    {
+      resetForm,
+      setSubmitting,
+    }: {
+      resetForm: () => void;
+      setSubmitting: (isSubmitting: boolean) => void;
+    }
   ) => {
-    try {
-      console.log("Contact form values:", values);
+    const formData = new FormData();
 
-      // 👉 API call here later
-      toast.success("Message sent successfully!");
-      resetForm();
+    // Append form values
+    (Object.keys(values) as (keyof ContactUsType)[]).forEach((key) => {
+      const value = values[key];
+      if (value !== undefined) {
+        formData.append(key, String(value));
+      }
+    });
+
+    // Your Web3Forms access key
+    formData.append(
+      "access_key",
+      "3ec9aff3-8a81-4853-ad78-d274a7e6b11f"
+    );
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(Object.fromEntries(formData)),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast.success("Message sent successfully!");
+        resetForm();
+        router.push("/");
+      } else {
+        toast.error("Failed to send message!");
+      }
     } catch (error) {
+      console.error("Error:", error);
       toast.error("Something went wrong. Please try again.");
+    } finally {
+      setSubmitting(false);
     }
   };
 
@@ -87,12 +127,12 @@ const ContactUsForm = () => {
               <div className="space-y-1">
                 <label className="text-gray-600 text-sm">Phone Number</label>
                 <Field
-                  name="phoneNumber"
+                  name="phoneNo"
                   placeholder="Phone Number"
                   className="w-full px-4 py-3 rounded-lg bg-gray-200 border border-gray-300 text-sm"
                 />
                 <ErrorMessage
-                  name="phoneNumber"
+                  name="phoneNo"
                   component="p"
                   className="text-xs text-red-500"
                 />

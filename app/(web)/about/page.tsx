@@ -9,9 +9,9 @@ const AboutPage = () => {
     <div className='overflow-hidden bg-black'>
       <Header />
       <About />
-      <Clients />
+      {/* <Clients /> */}
       <AwardHero />
-      <Cards />
+      {/* <Cards /> */}
     </div>
   )
 }

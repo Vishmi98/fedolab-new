@@ -29,9 +29,9 @@ const About = () => {
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.3 }}
                     >
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium autem quam doloremque facilis temporibus ratione ea recusandae, animi quo illum fugiat aspernatur quod non et, repudiandae nulla expedita obcaecati quidem voluptatem, ullam officia! Nesciunt, culpa dignissimos nemo hic eligendi dolorum nostrum sit quasi maiores mollitia ab, facilis ea excepturi impedit?
+                        FEDO-LAB is a cutting-edge technology startup specializing in AI, software development, digital marketing, mobile app development, and SEO. Our mission is to elevate businesses worldwide through advanced software and cloud solutions. With a vision to be the global forefront of transformative technology, we aim to enhance businesses across borders.
                     </motion.p>
-                    <motion.p
+                    {/* <motion.p
                         className='leading-7'
                         variants={paragraphVariants}
                         initial="hidden"
@@ -39,7 +39,7 @@ const About = () => {
                         viewport={{ once: true, amount: 0.3 }}
                     >
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Non illo eaque amet, autem recusandae facere consequuntur aliquam harum ducimus ea maiores animi sequi doloribus repellat consequatur quae. Harum doloremque id libero illum aperiam aut distinctio debitis eveniet odit quaerat et similique, ullam possimus necessitatibus dolorum amet cum nostrum tempora repellendus quos! Deserunt aut natus placeat sit, quos facilis, impedit et temporibus, consequatur amet similique repellat possimus illo animi! Eligendi, dignissimos.
-                    </motion.p>
+                    </motion.p> */}
                 </div>
             </div>
             <section className="grid grid-cols-1 md:grid-cols-2 mt-28 h-auto md:h-[600px] gap-12 md:gap-20 w-[90%] mx-auto items-center">
@@ -76,7 +76,7 @@ const About = () => {
                             Vision
                         </h1>
                         <p className="text-gray-300 leading-7">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus exercitationem cupiditate suscipit delectus esse illum sit soluta dignissimos vero omnis
+                            To become a globally recognized technology leader, driving innovation through AI, software, and digital solutions that empower businesses to grow, adapt, and succeed in an ever-evolving digital world.
                         </p>
                     </motion.div>
 
@@ -92,7 +92,7 @@ const About = () => {
                             Mission
                         </h1>
                         <p className="text-gray-300 leading-7">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas sit laudantium illo, aut iste soluta nulla aliquam est atque perspiciatis, deserunt sapiente non numquam eveniet quos quia cupiditate officiis architecto
+                            Our mission is to deliver intelligent, scalable, and high-quality digital solutions by combining cutting-edge technology with creativity. We strive to help businesses enhance their performance, expand their reach, and achieve sustainable growth through innovation and excellence.
                         </p>
                     </motion.div>
 

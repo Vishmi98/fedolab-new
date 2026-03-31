@@ -2,7 +2,7 @@ export type ContactUsType = {
     name: string;
     email: string;
     subject: string;
-    phoneNumber: string;
+    phoneNo: string;
     message: string;
 }
 export type SubmitFormResponseType = {

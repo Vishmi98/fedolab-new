@@ -10,7 +10,7 @@ export const NAV_LINKS = [
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
     // { label: "Projects", href: "/projects" },
-    { label: "Blogs", href: "/blogs" },
+    // { label: "Blogs", href: "/blogs" },
 ]
 
 export const FEATURED_WORKS = [
@@ -70,42 +70,42 @@ export const SERVICE_DATA: ServiceType[] = [
         icon: FaMicrochip,
         title: "AI Solutions",
         paragraph:
-            "Unleash the power of artificial intelligence to transform your business operations and gain a competitive edge. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, suscipit.",
+            "Unleash the power of artificial intelligence to transform your business operations and gain a competitive edge.",
     },
     {
         id: 2,
         icon: FaCloud,
         title: "Software Development",
         paragraph:
-            "Get custom software solutions tailored to your unique business needs, ensuring efficiency and innovation. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, suscipit.",
+            "Get custom software solutions tailored to your unique business needs, ensuring efficiency and innovation.",
     },
     {
         id: 3,
         icon: FaCode,
         title: "AWS Cloud Solutions",
         paragraph:
-            "Optimize your operations with tailored AWS solutions that boost scalability, security, and efficiency. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, suscipit.",
+            "Optimize your operations with tailored AWS solutions that boost scalability, security, and efficiency.",
     },
     {
         id: 4,
         icon: FaBullhorn,
         title: "Digital Marketing",
         paragraph:
-            "Amplify your online presence with our comprehensive digital marketing strategies that drive growth and engagement. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, suscipit.",
+            "Amplify your online presence with our comprehensive digital marketing strategies that drive growth and engagement.",
     },
     {
         id: 5,
         icon: BiMobile,
         title: "Mobile App Development",
         paragraph:
-            "Experience the future of mobile with our user-centric app development for iOS and Android platforms. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, suscipit.",
+            "Experience the future of mobile with our user-centric app development for iOS and Android platforms.",
     },
     {
         id: 6,
         icon: TbSeo,
         title: "SEO Services",
         paragraph:
-            "Boost your website's visibility and attract more organic traffic with our expert search engine optimization techniques. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, suscipit.",
+            "Boost your website's visibility and attract more organic traffic with our expert search engine optimization techniques.",
     },
 
 ];

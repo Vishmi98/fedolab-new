@@ -31,7 +31,7 @@ export default function RootLayout({
         <FluidCursor />
         {children}
         <Footer />
-         <MusicToggle />
+        <MusicToggle />
       </body>
     </html>
   );

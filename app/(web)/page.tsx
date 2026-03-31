@@ -7,8 +7,7 @@ import WhoWeAre from '@/modules/home/ui/WhoWeAre'
 
 const HomePage = () => {
   return (
-    <div className="relative overflow-hidden bg-gray-100">
-      {/* The SVG Line stays in the background */}
+    <div className="relative overflow-x-hidden bg-gray-100">      {/* The SVG Line stays in the background */}
       <ScrollLine />
 
       {/* Your content stays in the foreground */}
@@ -16,7 +15,7 @@ const HomePage = () => {
         <Hero />
         <WhoWeAre />
         <Services />
-        <FeaturedWorks />
+        {/* <FeaturedWorks /> */}
         {/* <About /> */}
       </div>
     </div>

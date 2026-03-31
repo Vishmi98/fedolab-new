@@ -26,7 +26,7 @@ const AwardHero: React.FC<AwardHeroProps> = ({ title = "fedolab" }) => {
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
-      className="relative h-[25vh] md:h-[50vh] w-full overflow-hidden bg-black flex items-center justify-center cursor-none"
+      className="relative h-[25vh] md:h-[60vh] w-full overflow-hidden bg-black flex items-center justify-center cursor-none"
     >
       {/* 1. BASE LAYER: Dim Outline */}
       <h1

@@ -11,7 +11,7 @@
 
 .mainContainer {
     width: 90%;
-    height: 450vh;
+    min-height: 100vh;
     margin-inline: auto;
     text-align: center;
 }
@@ -156,5 +156,5 @@
 }
 
 canvas {
-  touch-action: auto !important;
+  touch-action: none !important;
 }
