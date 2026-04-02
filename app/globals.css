@@ -154,7 +154,3 @@
 .glow-intense:hover {
   filter: drop-shadow(0 0 10px #fff) drop-shadow(0 0 40px #ffffff66);
 }
-
-canvas {
-  touch-action: none !important;
-}

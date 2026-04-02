@@ -17,7 +17,10 @@ export default function FluidCursor() {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  // 🚫 Do NOT render on mobile (prevents scroll blocking)
+  // ⛔ Prevent SSR mismatch
+  if (isMobile === null) return null;
+
+  // 🚫 Disable completely on mobile
   if (isMobile) return null;
 
   return (
