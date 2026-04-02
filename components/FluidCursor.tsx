@@ -21,7 +21,7 @@ export default function FluidCursor() {
   if (isMobile) return null;
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-[20]">
+    <div className="fixed inset-0 pointer-events-none z-[20] hidden md:block">
       <SmokeyFluidCursor
         config={{
           simResolution: 128,
